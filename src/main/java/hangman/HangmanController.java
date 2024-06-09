@@ -108,11 +108,6 @@ public class HangmanController {
           ========="""
     ));
 
-//    @FXML
-//    void initialize() {
-//
-//    }
-
     public void setGameRecord(GameRecord gameRecord) {
         this.currentGameRecord = gameRecord;
         resetGame();

@@ -42,7 +42,7 @@ public class PreviousGamesController {
     public void initialize() {
 
         try {
-            List<GameRecord> previousGames = databaseManager.getUserGameDetails(currentUser.getUsername());
+            List<GameRecord> previousGames = databaseManager.getUserGameDetails("Ali");
             table.getItems().addAll(previousGames);
         } catch (SQLException e) {
             e.printStackTrace();

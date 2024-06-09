@@ -29,6 +29,7 @@ public class LeaderboardController {
     public void initialize() {
         try {
             List<PlayerRecord> leaderboard = databaseManager.getLeaderboard();
+            System.out.println(leaderboard);
             table.getItems().addAll(leaderboard);
         } catch (SQLException e) {
             e.printStackTrace();
