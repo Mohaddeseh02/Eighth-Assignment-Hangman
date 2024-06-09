@@ -27,8 +27,19 @@ public class MainMenuPageController {
     }
 
     @FXML
-    void handlePreviousGames(ActionEvent event) {
-        loadPage("previousgames.fxml");
+    void handlePreviousGames(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("previousgames.fxml"));
+        Parent root = loader.load();
+        try {
+            PreviousGamesController previousGamesController = loader.getController();
+            previousGamesController.setCurrentUser(currentGameRecord);
+            previousGamesController.initPG();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        Stage stage = (Stage) text.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML

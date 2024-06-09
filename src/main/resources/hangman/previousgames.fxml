@@ -18,7 +18,7 @@
         <columns>
             <TableColumn fx:id="gameIdColumn" text="Game ID" >
                 <cellValueFactory>
-                    <PropertyValueFactory property="gameId" />
+                    <PropertyValueFactory property="gameID" />
                 </cellValueFactory>
             </TableColumn>
             <TableColumn fx:id="usernameColumn" text="Username" >

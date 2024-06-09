@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PreviousGamesController {
@@ -38,11 +39,16 @@ public class PreviousGamesController {
     private DatabaseManager databaseManager = new DatabaseManager();
     private GameRecord currentUser;
 
-    @FXML
-    public void initialize() {
+    public void initPG() {
 
         try {
-            List<GameRecord> previousGames = databaseManager.getUserGameDetails("Ali");
+            List<GameRecord> previousGames = new ArrayList<>();
+            try {
+                previousGames = databaseManager.getUserGameDetails(currentUser.getUsername());
+            }catch (Exception e){
+                previousGames = databaseManager.getUserGameDetails("Ali");
+                e.printStackTrace();
+            }
             table.getItems().addAll(previousGames);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -60,5 +66,8 @@ public class PreviousGamesController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void setCurrentUser(GameRecord currentUser) {
+        this.currentUser = currentUser;
     }
 }
