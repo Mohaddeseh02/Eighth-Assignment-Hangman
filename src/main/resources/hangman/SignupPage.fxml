@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="635.0" prefWidth="544.0" spacing="10" style="-fx-background-color: #001f3f; -fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="hangman.SignupPageController">
+
+    <!-- Title -->
+    <Label style="-fx-font-size: 24px; -fx-text-fill: white;" text="Signup" />
+
+    <!-- Username Field -->
+    <Label style="-fx-text-fill: white;" text="Username:" />
+    <TextField fx:id="usernameField" promptText="Enter username" style="-fx-background-color: #004080; -fx-text-fill: white; -fx-prompt-text-fill: #aaaaaa;" />
+
+    <!-- Email Field -->
+    <Label style="-fx-text-fill: white;" text="Email:" />
+    <TextField fx:id="emailField" promptText="Enter email" style="-fx-background-color: #004080; -fx-text-fill: white; -fx-prompt-text-fill: #aaaaaa;" />
+
+    <!-- Password Field -->
+    <Label style="-fx-text-fill: white;" text="Password:" />
+    <PasswordField fx:id="passwordField" promptText="Enter password" style="-fx-background-color: #004080; -fx-text-fill: white; -fx-prompt-text-fill: #aaaaaa;" />
+
+    <!-- Signup Button -->
+    <Button onAction="#handleSignup" style="-fx-background-color: #0059b3; -fx-text-fill: white; -fx-font-size: 14px;" text="Signup" />
+
+    <!-- Message Text -->
+    <Text fx:id="messageText" style="-fx-text-fill: white;" />
+
+    <!-- Login Link -->
+    <Text onMouseClicked="#handleLogin" style="-fx-fill: #00aaff; -fx-underline: true; -fx-cursor: hand;" text="Already have an account? Login here." />
+</VBox>
