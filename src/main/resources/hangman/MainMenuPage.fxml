@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="635.0" prefWidth="544.0" spacing="10" style="-fx-background-color: #001f3f; -fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.MainMenuPageController">
+
+    <!-- Error Text -->
+    <Text fx:id="text" style="-fx-text-fill: red;" />
+
+    <!-- Title -->
+    <Label style="-fx-font-size: 24px; -fx-text-fill: white;" text="Main Menu" />
+
+    <!-- Start Game Button -->
+    <Button onAction="#handleStartGame" style="-fx-background-color: #0059b3; -fx-text-fill: white; -fx-font-size: 14px;" text="Start Game" />
+
+    <!-- Leader Board Button -->
+    <Button onAction="#handleLeaderBoard" style="-fx-background-color: #0059b3; -fx-text-fill: white; -fx-font-size: 14px;" text="Leader Board" />
+
+    <!-- Previous Games Button -->
+    <Button onAction="#handlePreviousGames" style="-fx-background-color: #0059b3; -fx-text-fill: white; -fx-font-size: 14px;" text="Previous Games" />
+</VBox>
